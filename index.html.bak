@@ -16,7 +16,7 @@
         <!-- SimpleLightbox plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="./css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -68,7 +68,7 @@
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">At Your Service</h2>
+                <h2 class="text-center mt-0">The Rabbit Necessities</h2>
                 <hr class="divider" />
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 text-center">
@@ -176,8 +176,10 @@
         <!-- Call to action-->
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
-				<h2 class="mb-4">Live Laugh Love</h2>
-                <h2 class="mb-4" style="font-family: 'Brush Script MT', cursive;">Live Laugh Love</h2>
+				<h2 class="mb-4">I like to think that it was my own doing that got me to where I am today. But I want to give my human friend a shoutout for doing what she does for me.</h2>
+                <h2 class="mb-4">Heather, thanks for being such a cool human. Don't forget to live like Reba, Reba the Rabit does!</h2>
+				<h2 class="mb-4" style="font-family: 'Brush Script MT', cursive;">Live Laugh Love</h2>
+				<h2 class="mb-4">Love you girl!</h2>
                 <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
             </div>
         </section>
@@ -270,6 +272,6 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
     </body>
 </html>
