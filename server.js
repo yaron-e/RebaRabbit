@@ -6,9 +6,8 @@ const url = require('url');
 
 var verifyMimeType = true;
 var port = 5000;
-var serverURL = "127.0.0.1";
 
-console.log("Starting web server: " + serverURL + ":" + port);
+console.log("Starting web server: localhost" + ":" + port);
 
 var server = http.createServer(function(req,res){
   // set to URL or default to index.html
@@ -61,7 +60,7 @@ var server = http.createServer(function(req,res){
   }
 });
 
-server.listen(port,serverURL);
+server.listen(port);
 
 function getFile(localPath, res, mimeType){
   fs.readFile(localPath, function(err, data){
