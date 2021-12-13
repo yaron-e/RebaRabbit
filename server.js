@@ -5,7 +5,7 @@ const url = require('url');
 
 
 var verifyMimeType = true;
-var port = 5000;
+var port = 80;
 
 console.log("Starting web server: localhost" + ":" + port);
 
