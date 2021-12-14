@@ -1,15 +1,21 @@
-var http = require('http');
+//var http = require('http');
+const https = require('https');
 var path = require('path');
 var fs = require('fs');
 const url = require('url'); 
 
 
 var verifyMimeType = true;
-var port = 5000;
+var port = 80;
+
+const options = {
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('cert.pem')
+};
 
 console.log("Starting web server: localhost" + ":" + port);
 
-var server = http.createServer(function(req,res){
+var server = https.createServer(options, function(req,res){
   // set to URL or default to index.html
   //var filename = "/index.html"
   var parsedUrl;
