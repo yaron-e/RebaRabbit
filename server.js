@@ -6,12 +6,7 @@ const url = require('url');
 
 
 var verifyMimeType = true;
-var port = 443;
-
-const options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem')
-};
+var port = 8080;
 
 console.log("Starting web server: localhost" + ":" + port);
 
