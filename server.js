@@ -1,21 +1,15 @@
-//var http = require('http');
-const https = require('https');
+var http = require('http');
 var path = require('path');
 var fs = require('fs');
 const url = require('url'); 
 
 
 var verifyMimeType = true;
-var port = 443;
-
-const options = {
-  key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('cert.pem')
-};
+var port = 8080;
 
 console.log("Starting web server: localhost" + ":" + port);
 
-var server = https.createServer(options, function(req,res){
+var server = http.createServer(function(req,res){
   // set to URL or default to index.html
   //var filename = "/index.html"
   var parsedUrl;
@@ -37,7 +31,8 @@ var server = https.createServer(options, function(req,res){
     ".txt": "text/plain",
     ".jpg": "image/jpeg",
     ".gif": "image/gif",
-    ".png": "image/png"
+    ".png": "image/png",
+	".mp4": "video/mp4"
   };
 
   var validMimeType = true;
