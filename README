@@ -1,0 +1,18 @@
+I followed these instructions to create a 'rebarabbit.service' that will start automatically on the server.
+
+`https://hackernoon.com/making-node-js-service-always-alive-on-ubuntu-server-e20c9c0808e4`
+
+## To Start the service run
+```
+sudo systemctl start rebarabit.service
+```
+
+## To Stop the service run
+```
+sudo systemctl stop rebarabbit.service
+```
+
+## To restart service run
+```
+sudo systemctl restart rebarabbit.service
+```
