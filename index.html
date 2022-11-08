@@ -209,7 +209,7 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <form id="contactForm" method="POST" onsubmit="validate()">
+                        <form id="contactForm" method="POST" onsubmit="return validate()">
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
@@ -314,6 +314,12 @@
                     "message": message
                   };
                   console.log(data);
+
+                  if (name.length > 0 && email.length > 0 && phone.length > 0 && message.length) {
+                    $("#submitButton").prop('disabled', false);
+                  }
+
+
                   var jqxhr = $.post( URL, data, function() {
                     console.log( "success" );
                     })
@@ -327,7 +333,7 @@
                         console.log( "finished" );
                     });
 
-                  //return either true or false
+                  return false;
                }
             //-->
          </script>
