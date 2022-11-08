@@ -240,7 +240,7 @@
                                 </div>
                             </div>
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Submit</button></div>
                         </form>
                     </div>
                 </div>
@@ -300,7 +300,8 @@
         <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
         <script>
             <!--
-               function validation() {
+               function validation(event) {
+                event.preventDefault();
                   const URL = "https://hqr3o6im7nwym3mpv7yndddsgu0mahbr.lambda-url.us-east-1.on.aws/";
                   const name = $("#name").val();
                   const email = $("#email").val();
