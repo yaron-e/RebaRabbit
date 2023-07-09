@@ -215,7 +215,7 @@
                         </button>
                     </div>
                     <div class="col-lg-6">
-                        <form id="contactForm" method="POST" onsubmit="return false;">
+                        <form id="contactForm" onsubmit="return false;">
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
@@ -336,12 +336,7 @@
                   if (name.length > 0 && email.length > 0 && phone.length > 0 && message.length) {
                     $("#submitButton").prop('disabled', false);
                     $('.alert').hide();
-                  } else if (name.length <= 0 || email.length <= 0 || phone.length <= 0) {
-                    $('.alert').show();
-                  }
-
-
-                  var jqxhr = $.post( URL, data, function() {
+                    var jqxhr = $.post( URL, data, function() {
                     console.log( "success" );
                     })
                     .done(function() {
@@ -357,6 +352,12 @@
                     .always(function() {
                         console.log( "finished" );
                     });
+                  } else if (name.length <= 0 || email.length <= 0 || phone.length <= 0) {
+                    $('.alert').show();
+                  }
+
+
+                  
 
                   return false;
                }
