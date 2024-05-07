@@ -17,7 +17,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-
+        <audio id="my_audio" src="RebaSong.mp3" loop="loop"></audio>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -36,6 +36,19 @@
                 </div>
             </div>
         </nav>
+        <section class="page-section bg-primary" id="announcement">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Big Time Announcement!</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-4">Listen up bucks and does! Reba the Rabbot has released her world wide premier track!</p>
+                        <p class="text-white-75 mb-4">Reba meed you to LISTEM! Listen with your ears amd your heart <3</p>
+						<a class="btn btn-light btn-xl" href="#services">Take my 4 step class to be more like me.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
@@ -258,6 +271,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Footer-->
         <footer class="bg-light py-5">
 			<section class="page-section" id="contact">
@@ -302,7 +316,24 @@
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        
+        <script>
+            window.onload = function() {
+                var audio = document.createElement("AUDIO")
+                document.body.appendChild(audio);
+                audio.src = "/RebaSong.mp3"
+
+                document.body.addEventListener("mousemove", function () {
+                    audio.play()
+                })
+
+                // const media = document.getElementById("my_audio").nativeElement;
+                // media.muted = true; // without this line it's not working although I have "muted" in HTML
+                // media.play();
+                // document.getElementById("my_audio").play();
+            }
+        </script>
+        
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
